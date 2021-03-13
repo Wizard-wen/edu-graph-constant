@@ -2,7 +2,7 @@
  *
  */
 
-import { RepositoryType } from '../../constant';
+import { RepositoryType } from '../../constant/account';
 
 export type RepositoryResponseType = {
   id: string;

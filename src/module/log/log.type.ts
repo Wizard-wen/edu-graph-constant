@@ -1,4 +1,4 @@
-import { PullRequestOperatorType, PullRequestStatus } from '../../constant';
+import { PullRequestOperatorType, PullRequestStatus } from '../../constant/pull.request';
 
 export type PullRequestLog = {
   operatorType: PullRequestOperatorType;

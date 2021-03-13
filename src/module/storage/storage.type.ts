@@ -3,7 +3,7 @@
  * @date 2021/02/20 22:00
  */
 
-import { StorageType } from '../../constant';
+import { StorageType } from '../../constant/storage';
 
 export type QiniuCallbackRequestType = {
   key: string;
