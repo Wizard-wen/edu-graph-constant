@@ -1,0 +1,10 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### 0.0.2 (2021-04-11)
+
+
+### Features
+
+* **edu:** 增加constant。 ([f1afd8f](https://personal.github.com/Wizard-wen/edu-graph-type/commit/f1afd8f9d914716fa58274aafd107bd38e6af199))

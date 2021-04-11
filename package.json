@@ -1,13 +1,14 @@
 {
   "name": "edu-graph-constant",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc --build --force",
-    "build": "npm run tsc && npm link"
+    "build": "npm run tsc && npm link",
+    "pub": "npm run tsc && standard-version && npm publish"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "standard-version": "^9.2.0",
     "typescript": "^4.2.3"
   },
   "dependencies": {}
