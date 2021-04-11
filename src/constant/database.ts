@@ -25,4 +25,5 @@ export enum Database {
   Admin = 'Admin',
   Point = 'Point',
   PointDetail = 'PointDetail',
+  SectionKnowledge = 'SectionKnowledge'
 }
