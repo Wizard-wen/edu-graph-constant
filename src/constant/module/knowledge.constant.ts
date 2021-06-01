@@ -1,9 +1,9 @@
 /**
  * @author wizard.song
- * @date 2021/02/28 23:55
+ * @date 2021/04/30 22:05
  */
 
-export enum KnowledgeLevel {
+export enum KnowledgeLevelEnum {
   EducationBackGround = 'educationBackGround',
   Algorithm = 'algorithm',
   Pending = 'pending'

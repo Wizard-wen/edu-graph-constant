@@ -3,7 +3,7 @@
  * @date 2021/02/20 22:00
  */
 
-import { StorageType } from '../../constant/storage';
+import { AccountEnum, FileEnum } from "../index";
 
 export type QiniuCallbackRequestType = {
   key: string;
@@ -11,9 +11,10 @@ export type QiniuCallbackRequestType = {
   fsize: number;
   bucket: string;
   mimeType: string;
-  userId: string;
+  accountId: string;
+  accountType: AccountEnum;
   name: string;
-  storageType: StorageType;
+  fileType: FileEnum;
 };
 
 export type QiniuUploadTokenDataType = {
@@ -22,9 +23,10 @@ export type QiniuUploadTokenDataType = {
 };
 
 export type UploadTokenRequestType = {
-  userId?: string;
+  accountId: string;
+  accountType: AccountEnum;
   name: string;
-  storageType?: StorageType;
+  fileType?: FileEnum;
 };
 
 export type CustomQiniuPutPolicyOptionsType = {
@@ -36,32 +38,34 @@ export type CustomQiniuPutPolicyOptionsType = {
   callbackBody: string;
 };
 
-export type StorageResponseType = {
+export type FileResponseType = {
   id: string;
   key: string;
-  userId: string;
+  accountId: string;
+  accountType: AccountEnum;
   size: number;
-  storageType: StorageType;
+  type: FileEnum;
   name: string;
   mimeType: string;
   createdAt: Date;
   updatedAt: Date;
 };
 
-export type StoragePageListResponseType = {
-  list: StorageResponseType[];
+export type FilePageListResponseType = {
+  list: FileResponseType[];
   total: number;
 };
 
-export type StorageResponseTypeUpdateRequestType = {
+export type FileResponseTypeUpdateRequestType = {
   id: string;
   name?: string;
 };
 
-export type StoragePageListFilterRequestType = {
+export type FilePageListFilterRequestType = {
   pageIndex: number;
   pageSize: number;
-  storageType: StorageType;
+  fileType?: FileEnum;
+  accountType?: AccountEnum;
   order: { [key: string]: number } | {};
 };
 
