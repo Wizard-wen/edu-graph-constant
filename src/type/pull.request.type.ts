@@ -19,3 +19,13 @@ export type PullRequestResponseType = {
   mergedAt?: Date;
   recordList?: PullRequestLogType[]
 }
+
+export type PullRequestModelType = {
+  id: string;
+  entityId: string;
+  status: PullRequestStatusEnum,
+  createdAt: Date;
+  updatedAt?: Date;
+  mergedAt?: Date;
+  recordList?: PullRequestLogType[]
+}

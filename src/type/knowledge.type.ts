@@ -17,6 +17,13 @@ export type KnowledgeResponseType = {
   knowledgeLevelId?: string;
 };
 
+export type KnowledgeCreateRequestType = {
+  name: string;
+  knowledgeBaseTypeId: string;
+  domainId?: string;
+  description?: string;
+};
+
 export type KnowledgePageListResponseType = {
   list: KnowledgeResponseType[];
   total: number;

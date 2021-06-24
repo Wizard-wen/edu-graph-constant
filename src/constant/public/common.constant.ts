@@ -7,5 +7,15 @@ export enum PublicEntityEnum {
   KnowledgeEdge = 'KnowledgeEdge',
   Knowledge = 'Knowledge',
   Exercise = 'Exercise',
-  Domain = 'domain'
+  Repository = 'repository'
+}
+
+export enum SectionEntityEnum {
+  Knowledge = 'Knowledge',
+  Exercise = 'Exercise'
+}
+
+export enum RepositoryEntityEnum {
+  Knowledge = 'Knowledge',
+  Exercise = 'Exercise'
 }

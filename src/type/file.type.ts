@@ -5,6 +5,7 @@
 
 import { AccountEnum, FileEnum } from "../index";
 
+// 七牛回调系统接口的入参
 export type QiniuCallbackRequestType = {
   key: string;
   hash: string;
@@ -14,19 +15,17 @@ export type QiniuCallbackRequestType = {
   accountId: string;
   accountType: AccountEnum;
   name: string;
-  fileType: FileEnum;
+  type: FileEnum;
 };
 
-export type QiniuUploadTokenDataType = {
+export type QiniuUploadingCredentialResponseType = {
   uploadToken: string;
-  fileKey: string;
+  key: string;
 };
 
-export type UploadTokenRequestType = {
-  accountId: string;
-  accountType: AccountEnum;
+export type QiniuUploadingCredentialRequestType = {
   name: string;
-  fileType?: FileEnum;
+  type?: FileEnum;
 };
 
 export type CustomQiniuPutPolicyOptionsType = {
@@ -41,14 +40,14 @@ export type CustomQiniuPutPolicyOptionsType = {
 export type FileResponseType = {
   id: string;
   key: string;
-  accountId: string;
-  accountType: AccountEnum;
   size: number;
   type: FileEnum;
   name: string;
   mimeType: string;
   createdAt: Date;
   updatedAt: Date;
+  accountId?: string;
+  accountType?: AccountEnum;
 };
 
 export type FilePageListResponseType = {
@@ -56,17 +55,16 @@ export type FilePageListResponseType = {
   total: number;
 };
 
-export type FileResponseTypeUpdateRequestType = {
-  id: string;
+export type FileUpdateRequestType = {
+  key: string;
   name?: string;
 };
 
 export type FilePageListFilterRequestType = {
   pageIndex: number;
   pageSize: number;
-  fileType?: FileEnum;
-  accountType?: AccountEnum;
-  order: { [key: string]: number } | {};
+  type?: FileEnum;
+  order?: { [key: string]: number };
 };
 
 export type QiniuFileStatType = {

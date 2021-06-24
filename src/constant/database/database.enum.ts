@@ -16,8 +16,6 @@ export enum DatabaseEnum {
   AdminPageRouteAuth = 'AdminPageRouteAuth',
   AdminPageOperationAuth = 'AdminPageOperationAuth',
   AdminAPIAuth = 'AdminAPIAuth',
-  // article
-  Article = 'Article',
   // file
   RichText = 'RichText',
   File = 'File',
@@ -31,12 +29,13 @@ export enum DatabaseEnum {
   KnowledgeLevelBaseType = 'KnowledgeLevelBaseType',
   // section
   Section = 'Section',
-  SectionKnowledge = 'SectionKnowledge',
+  SectionEntity = 'SectionEntity',
+  SectionArticle = 'v',
   // exercise
   Exercise = 'Exercise',
   // repository
   Repository = 'Repository',
-  RepositoryKnowledge = 'RepositoryKnowledge',
+  RepositoryEntity = 'RepositoryEntity',
   // csp report
   CSPReport = 'CSPReport',
   // comment

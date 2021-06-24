@@ -12,6 +12,8 @@ export type RepositoryResponseType = {
   type: RepositoryEnum;
   // admin调用时才展示userId
   userId?: string;
+  createdAt: Date;
+  updatedAt: Date;
 };
 
 export type RepositoryListRequestFilterType = {

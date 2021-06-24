@@ -11,3 +11,10 @@ export type DomainResponseType = {
   createdAt: Date;
   updatedAt: Date;
 }
+
+export type DomainTreeNodeResponseType = DomainResponseType & {
+  // tree字段
+  title: string;
+  key: string;
+  children?: DomainTreeNodeResponseType[];
+};

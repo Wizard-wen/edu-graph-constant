@@ -11,6 +11,11 @@ export * from './type/log.type';
 export * from './type/pull.request.type';
 export * from './type/section.type';
 export * from './type/comment.type';
+export * from './type/article.type';
+export * from './type/exercise.type';
+export * from './type/star.type';
+export * from './type/user.type';
+export * from './type/domain.type';
 // constant
 export {
   AccountEnum,
@@ -48,5 +53,7 @@ export {
   qiniuMac
 } from './constant/public/qiniu.constant';
 export {
-  PublicEntityEnum
+  PublicEntityEnum,
+  SectionEntityEnum,
+  RepositoryEntityEnum
 } from './constant/public/common.constant';
