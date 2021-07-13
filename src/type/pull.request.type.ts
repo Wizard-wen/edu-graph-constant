@@ -5,27 +5,21 @@
 
 import {
   PullRequestStatusEnum,
-} from '../constant/module/pull.request.constant';
+} from '..';
 import { PullRequestLogType } from './log.type';
-import { PublicEntityEnum } from '../constant/public/common.constant';
-
-export type PullRequestResponseType = {
-  id: string;
-  entityId: string;
-  pullRequestEntityType: PublicEntityEnum,
-  status: PullRequestStatusEnum,
-  createdAt: Date;
-  updatedAt?: Date;
-  mergedAt?: Date;
-  recordList?: PullRequestLogType[]
-}
+import {
+  PullRequestEntityType
+} from '..';
 
 export type PullRequestModelType = {
   id: string;
   entityId: string;
+  entityType: PullRequestEntityType,
   status: PullRequestStatusEnum,
   createdAt: Date;
   updatedAt?: Date;
   mergedAt?: Date;
   recordList?: PullRequestLogType[]
 }
+
+export type PullRequestResponseType = PullRequestModelType;

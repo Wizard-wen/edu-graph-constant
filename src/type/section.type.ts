@@ -3,7 +3,9 @@
  * @date 2021/05/29 11:38
  */
 
-export type SectionResponseType = {
+import { SectionEntityType } from "../../dist/constant/public/common.constant";
+
+export type SectionModelType = {
   id: string;
   key: string;
   name: string;
@@ -11,6 +13,8 @@ export type SectionResponseType = {
   repositoryId: string;
   parentId?: string;
 }
+
+export type SectionResponseType = SectionModelType;
 
 export type SectionCreateRequestType = {
   name: string;
@@ -25,3 +29,20 @@ export type SectionTreeRequestType = {
 export type SectionTreeNodeType = ({
   children?: SectionTreeNodeType[];
 } & SectionResponseType)
+
+export type SectionEntityResponseType = {
+  id: string;
+  title: string;
+  name: string;
+  key: string;
+  sectionId?: string;
+  parentId?: string;
+  entityId?: string;
+  entityType?: SectionEntityType;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export type SectionEntityTreeNodeType = (SectionEntityResponseType & {
+  children?: SectionEntityTreeNodeType[];
+})

@@ -1,5 +1,8 @@
+/**
+ *
+ */
 
-export type ArticleResponseType = {
+export type ArticleModelType = {
   id: string;
   userId: string;
   content: string;
@@ -7,3 +10,4 @@ export type ArticleResponseType = {
   createdAt: Date;
   updatedAt: Date;
 }
+export type ArticleResponseType = ArticleModelType;

@@ -3,7 +3,7 @@
  * @date 2020/09/23 27:07
  */
 
-export type KnowledgeResponseType = {
+export type KnowledgeModelType = {
   id: string;
   name: string;
   knowledgeBaseTypeId: string;
@@ -15,6 +15,11 @@ export type KnowledgeResponseType = {
   isCertificated?: boolean;
   description?: string;
   knowledgeLevelId?: string;
+  isDeleted?: boolean;
+}
+export type KnowledgeResponseType = KnowledgeModelType & {
+  // entity
+  entityId?: string
 };
 
 export type KnowledgeCreateRequestType = {
@@ -41,21 +46,3 @@ export type KnowledgeBaseTypePageListResponseType = {
   total: number;
 };
 
-export type KnowledgeEdgeResponseType = {
-  id: string;
-  originKnowledgeId: string;
-  targetKnowledgeId: string;
-  knowledgeId: string;
-  createdAt: Date;
-  updatedAt: Date;
-  // admin调用时才展示userId
-  userId?: string;
-  weight?: number;
-  description?: string;
-  isCertificated?: boolean;
-}
-
-export type KnowledgeEdgePageListResponseType = {
-  list: KnowledgeEdgeResponseType[];
-  total: number;
-}

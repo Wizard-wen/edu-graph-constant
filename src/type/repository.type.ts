@@ -4,9 +4,10 @@
  */
 
 import { RepositoryEnum } from '../constant/module/account.constant';
-import { KnowledgeResponseType, KnowledgeEdgeResponseType } from './knowledge.type';
+import { KnowledgeResponseType } from './knowledge.type';
+import { KnowledgeEdgeResponseType } from './knowledge.edge.type';
 
-export type RepositoryResponseType = {
+export type RepositoryModelType = {
   id: string;
   name: string;
   type: RepositoryEnum;
@@ -14,6 +15,12 @@ export type RepositoryResponseType = {
   userId?: string;
   createdAt: Date;
   updatedAt: Date;
+  description?: string;
+}
+
+export type RepositoryResponseType = RepositoryModelType & {
+  // entity表中的id
+  entityId: string;
 };
 
 export type RepositoryListRequestFilterType = {

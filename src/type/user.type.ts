@@ -1,9 +1,11 @@
 /**
- *
+ * @author wizard.song
+ * @date 2021/07/12 23:37
  */
+
 import { UserEnum } from "..";
 
-export type UserResponseType = {
+export type UserModelType = {
   type: UserEnum;
   organizationId?: string;
   name: string;
@@ -14,3 +16,5 @@ export type UserResponseType = {
   createdAt: Date;
   updatedAt: Date;
 };
+
+export type UserResponseType = UserModelType;

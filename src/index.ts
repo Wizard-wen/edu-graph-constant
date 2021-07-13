@@ -7,6 +7,7 @@
 export * from './type/file.type';
 export * from './type/knowledge.type';
 export * from './type/repository.type';
+export * from './type/knowledge.edge.type';
 export * from './type/log.type';
 export * from './type/pull.request.type';
 export * from './type/section.type';
@@ -16,6 +17,7 @@ export * from './type/exercise.type';
 export * from './type/star.type';
 export * from './type/user.type';
 export * from './type/domain.type';
+export * from './type/entity.type';
 // constant
 export {
   AccountEnum,
@@ -53,7 +55,11 @@ export {
   qiniuMac
 } from './constant/public/qiniu.constant';
 export {
-  PublicEntityEnum,
-  SectionEntityEnum,
-  RepositoryEntityEnum
-} from './constant/public/common.constant';
+  PublicEntityType,
+  SectionEntityType,
+  RepositoryEntityType,
+  PullRequestEntityType,
+  StarEntityType,
+  TagEntityType,
+  CommentEntityType
+} from './constant/public/entity.constant';

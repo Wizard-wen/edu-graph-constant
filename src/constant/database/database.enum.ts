@@ -25,12 +25,13 @@ export enum DatabaseEnum {
   KnowledgeGraphEdge = 'KnowledgeGraphEdge',
   KnowledgeBaseType = 'KnowledgeBaseType',
   Knowledge = 'Knowledge',
-  KnowledgeLevel = 'KnowledgeLevel',
-  KnowledgeLevelBaseType = 'KnowledgeLevelBaseType',
+  // level
+  Level = 'Level',
+  LevelBaseType = 'LevelBaseType',
   // section
   Section = 'Section',
   SectionEntity = 'SectionEntity',
-  SectionArticle = 'v',
+  SectionArticle = 'SectionArticle',
   // exercise
   Exercise = 'Exercise',
   // repository

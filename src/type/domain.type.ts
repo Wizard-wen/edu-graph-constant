@@ -1,8 +1,9 @@
 /**
- *
+ * @author wizard.song
+ * @date 2021/07/12 23:24
  */
 
-export type DomainResponseType = {
+export type DomainModelType = {
   id: string;
   name: string;
   isCertificated: boolean;
@@ -11,6 +12,8 @@ export type DomainResponseType = {
   createdAt: Date;
   updatedAt: Date;
 }
+
+export type DomainResponseType = DomainModelType;
 
 export type DomainTreeNodeResponseType = DomainResponseType & {
   // tree字段

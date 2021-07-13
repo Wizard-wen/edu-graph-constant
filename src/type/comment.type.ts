@@ -1,43 +1,40 @@
 /**
- *
+ * @author wizard.song
+ * @date 2021/06/26 23:15
  */
-import { PublicEntityEnum } from '../constant/public/common.constant';
+
+import {
+  CommentEntityType,
+} from '../constant/public/entity.constant';
 
 export type CommentModelType = {
   id: string;
+  entityId: string;
+  entityType: string;
   userId?: string;
-  entityId: string
   content: string;
   parentId?: string;
+  rootCommentId? : string;
   hasPicture?: boolean;
   pictureKeyList: string[];
   createdAt: Date;
   updatedAt: Date;
 };
 
-export type CommentResponseType = {
-  id: string;
-  userId?: string;
-  entityType: PublicEntityEnum;
-  entityId: string
-  content: string;
-  parentId?: string;
-  hasPicture?: boolean;
-  pictureKeyList?: string[];
-  createdAt: Date;
-  updatedAt: Date;
-};
+export type CommentResponseType = CommentModelType;
+
+export type CommentTreeBaseType = CommentModelType;
 
 export type CommentTreeNodeType = ({
   key: string;
   title: string;
   name: string;
   children?: CommentTreeNodeType[];
-} & CommentResponseType);
+} & CommentTreeBaseType);
 
 
 export type CommentCreateRequestType = {
-  entityType: PublicEntityEnum;
+  entityType: CommentEntityType;
   entityId: string;
   content: string;
   parentId?: string;
@@ -47,14 +44,14 @@ export type CommentCreateRequestType = {
 
 export type CommentRemoveRequestType = {
   id: string;
-  entityType: PublicEntityEnum;
+  entityType: CommentEntityType;
   entityId: string;
 };
 
 export type CommentPageListRequestType = {
   pageSize: number;
   pageIndex: number;
-  entityType?: PublicEntityEnum;
+  entityType?: CommentEntityType;
   order?: { [key: string]: number };
 };
 
